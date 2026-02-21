@@ -165,13 +165,17 @@ img{
     align-items: center;
     justify-content: center;
     font-family: StretchProBasic;
+    text-align: center;
     color: white;
-    font-size: 7vh;
+
+font-size: clamp(2rem, 5vw, 5rem);
 }
 .sec4{
     background: rgb(6, 0, 23);
 }
 .about{
+font-size: clamp(2rem, 5vw, 5rem);
+
     font-family: StretchProBasic;
     color: white;
     font-size: 7vh;
@@ -200,6 +204,20 @@ img{
     width: 100%;
     gap: 7vw;
 }
+
+@media (max-width: 768px) {
+  /* Hide the first and third image containers */
+  .image-container:nth-child(1),
+  .image-container:nth-child(3) {
+    display: none;
+  }
+  
+  /* Make the remaining image take up more space if needed */
+  .image-container:nth-child(2) {
+    width: 100%;
+  }
+}
+
 .image-container{
     width: 19vw;
     height: 50vh;
@@ -399,6 +417,9 @@ img{
     line-height: 6vh;
     position: relative;
     margin-bottom: 5vh;
+
+    
+font-size: clamp(2rem, 6vw, 5rem);
 }
 p{
     font-family: yapari;
