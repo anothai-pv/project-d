@@ -1,3 +1,7 @@
+$(".collapsible").on("click", function () {
+  $(".phone-header").toggleClass("opened");
+});
+
 $(function () {
   $('a[href^="#"]').on("click", function (event) {
     if ($(this).hasClass("car-link")) {
@@ -15,73 +19,73 @@ $(function () {
     $.scrollTo($targetEl, 800);
   });
 
-const images = [];
-let currentIndex = 0;
+  const images = [];
+  let currentIndex = 0;
 
-async function loadImages() {
-  let i = 1;
-  let foundAll = false;
+  async function loadImages() {
+    let i = 1;
+    let foundAll = false;
 
-  while (!foundAll) {
-    const path = `./assets/img/gallery/car${i}.jpg`;
+    while (!foundAll) {
+      const path = `./assets/img/gallery/car${i}.jpg`;
 
-    try {
-      // Check if the file exists before adding it
-      const response = await fetch(path, { method: "HEAD" });
+      try {
+        // Check if the file exists before adding it
+        const response = await fetch(path, { method: "HEAD" });
 
-      if (response.ok) {
-        images.push(path);
-        i++;
-      } else {
-        foundAll = true; // Stop when we hit a 404
+        if (response.ok) {
+          images.push(path);
+          i++;
+        } else {
+          foundAll = true; // Stop when we hit a 404
+        }
+      } catch (error) {
+        foundAll = true;
       }
-    } catch (error) {
-      foundAll = true;
+
+      // Safety break so it doesn't run forever if something goes wrong
+      if (i > 100) break;
     }
 
-    // Safety break so it doesn't run forever if something goes wrong
-    if (i > 100) break;
+    // Once loaded, initialize the first set of images
+    updateImages();
   }
 
-  // Once loaded, initialize the first set of images
-  updateImages();
-}
+  // Start the auto-fetching process
+  loadImages();
 
-// Start the auto-fetching process
-loadImages();
+  /* --- Your Existing Logic --- */
 
-/* --- Your Existing Logic --- */
+  $("#left-arrow").on("click", function () {
+    if (images.length === 0) return;
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateImages();
+  });
 
-$("#left-arrow").on("click", function () {
-  if (images.length === 0) return;
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  updateImages();
-});
+  $("#right-arrow").on("click", function () {
+    if (images.length === 0) return;
+    currentIndex = (currentIndex + 1) % images.length;
+    updateImages();
+  });
 
-$("#right-arrow").on("click", function () {
-  if (images.length === 0) return;
-  currentIndex = (currentIndex + 1) % images.length;
-  updateImages();
-});
+  function updateImages() {
+    if (images.length === 0) return; // Don't run if no images found yet
 
-function updateImages() {
-  if (images.length === 0) return; // Don't run if no images found yet
+    $(".image-container").addClass("blink");
 
-  $(".image-container").addClass("blink");
+    setTimeout(() => {
+      $("#img1").attr(
+        "src",
+        images[(currentIndex - 1 + images.length) % images.length],
+      );
+      $("#img2").attr("src", images[currentIndex]);
+      $("#img3").attr("src", images[(currentIndex + 1) % images.length]);
+    }, 250);
 
-  setTimeout(() => {
-    $("#img1").attr(
-      "src",
-      images[(currentIndex - 1 + images.length) % images.length],
-    );
-    $("#img2").attr("src", images[currentIndex]);
-    $("#img3").attr("src", images[(currentIndex + 1) % images.length]);
-  }, 250);
-
-  setTimeout(() => {
-    $(".image-container").removeClass("blink");
-  }, 500);
-}
+    setTimeout(() => {
+      $(".image-container").removeClass("blink");
+    }, 500);
+  }
 
   $(".price-category-toggle").on("click", function () {
     const $category = $(this).closest(".price-category");
