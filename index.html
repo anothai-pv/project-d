@@ -32,11 +32,13 @@
       <a href="#contact" class="link link2">CONTACT</a>
     </header>
     <div class="phone-header">
-      <img src="assets/img/logo.svg" alt="project-d logo" class="logo" />
-      <a href="#sec1" class="link home">HOME</a>
-      <a href="#sec2" class="link link2">GALLERY</a>
-      <a href="#sec3" class="link link2">PRICING</a>
-      <a href="#contact" class="link link2">CONTACT</a>
+      <div class="phone-nav-container">
+        <img src="assets/img/logo.svg" alt="project-d logo" class="logo" />
+        <a href="#sec1" class="link home">HOME</a>
+        <a href="#sec2" class="link link2">GALLERY</a>
+        <a href="#sec3" class="link link2">PRICING</a>
+        <a href="#contact" class="link link2">CONTACT</a>
+      </div>
     </div>
     <button class="collapsible">x</button>
     <main>
@@ -306,44 +308,43 @@
           </div>
         </div>
       </section>
-      <section id="contact" class="contact">
-        <div class="contactgrid">
-          <h1 class="contacttitle">CONTACT US</h1>
-          <div class="contactleft">
-            <div class="socials">
-              <a href="" class="social">Instagram </a>
-              <img src="assets/img/linkarrow.svg" alt="" class="linkarrow" />
-            </div>
-            <div class="socials">
-              <a href="" class="social">Facebook </a>
-              <img src="assets/img/linkarrow.svg" alt="" class="linkarrow" />
-            </div>
+
+      <svg viewBox="0 0 100 20" layout="responsive" class="footer-spacer"></svg>
+    </main>
+
+    <footer id="contact" class="contact">
+      <div class="contactgrid">
+        <h1 class="contacttitle">CONTACT US</h1>
+        <div class="contactleft">
+          <div class="socials">
+            <a href="" class="social">Instagram </a>
+            <img src="assets/img/linkarrow.svg" alt="" class="linkarrow" />
           </div>
-          <!-- <div class="contactright">
-        <h1 class="email">Contact@ProjectD.com</h1>
-        <h1 class="address">Rue des Degues 2,<br> Braine le chateau</h1>
-    </div> -->
-          <div class="contactright">
-            <h1 class="email">
-              <a class="social" href="mailto:contact@ProjectD.com"
-                >contact@ProjectD.com</a
-              >
-            </h1>
-            <address class="address">
-              <a
-                href="https://maps.google.com/?q=Rue+des+Degues+2,Braine+le+chateau"
-                target="_blank"
-                class="social"
-              >
-                Rue des Degues 2,<br />
-                Braine le chateau
-              </a>
-            </address>
+          <div class="socials">
+            <a href="" class="social">Facebook </a>
+            <img src="assets/img/linkarrow.svg" alt="" class="linkarrow" />
           </div>
         </div>
-      </section>
-    </main>
-    <footer></footer>
+
+        <div class="contactright">
+          <h1 class="email">
+            <a class="social" href="mailto:contact@ProjectD.com"
+              >contact@ProjectD.com</a
+            >
+          </h1>
+          <address class="address">
+            <a
+              href="https://maps.google.com/?q=Rue+des+Degues+2,Braine+le+chateau"
+              target="_blank"
+              class="social"
+            >
+              Rue des Degues 2,<br />
+              Braine le chateau
+            </a>
+          </address>
+        </div>
+      </div>
+    </footer>
     <script
       src="https://code.jquery.com/jquery-4.0.0.min.js"
       integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
