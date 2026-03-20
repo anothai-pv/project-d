@@ -19,11 +19,11 @@
     "serv_seat": "Seat Wash",
     "about_title": "ABOUT US",
     "about_q_title": "GUARANTEED QUALITY",
-    "about_q_text": "Here at Project D, we ensure the utmost attention to each and every car that passes through our garage. Each car is meticulously cleaned and cared for using premium grade products and expertise. All work is carried out by a certified specialist.",
+    "about_q_text": "Here at Project D, we ensure the utmost attention to each and every car that passes through our garage. <br/><br/> Each car is meticulously cleaned and cared for using premium grade products and expertise. All work is carried out by a certified specialist.",
     "about_p_title": "AFFORDABLE PRICES",
-    "about_p_text": "At Project D, we believe professional detailing should be both high-quality and fairly priced. Every service we offer is competitively structured to provide outstanding results.",
+    "about_p_text": "At Project D, we believe professional detailing should be both high-quality and fairly priced.<br/><br/> Every service we offer is competitively structured to provide outstanding results.",
     "about_s_title": "EXCELLENT CUSTOMER SERVICE",
-    "about_s_text": "Project D takes pride in providing a service experience that is as dependable as our workmanship. Every client is treated with respect, clear communication, and honest guidance.",
+    "about_s_text": "Project D takes pride in providing a service experience that is as dependable as our workmanship.<br/><br/> Every client is treated with respect, clear communication, and honest guidance.",
     "footer_contact": "CONTACT US"
   },
   "fr": {
@@ -46,11 +46,11 @@
     "serv_seat": "Lavage des sièges",
     "about_title": "À PROPOS",
     "about_q_title": "QUALITÉ GARANTIE",
-    "about_q_text": "Chez Project D, nous accordons la plus grande attention à chaque voiture qui passe par notre garage. Chaque véhicule est méticuleusement nettoyé et soigné avec des produits et une expertise de premier choix. Tout le travail est effectué par un spécialiste certifié.",
+    "about_q_text": "Chez Project D, nous accordons la plus grande attention à chaque voiture qui passe par notre garage.<br/><br/> Chaque véhicule est méticuleusement nettoyé et soigné avec des produits et une expertise de premier choix. Tout le travail est effectué par un spécialiste certifié.",
     "about_p_title": "PRIX ABORDABLES",
-    "about_p_text": "Chez Project D, nous pensons que le detailing professionnel doit être à la fois de haute qualité et au juste prix. Chaque service est structuré de manière compétitive pour offrir des résultats exceptionnels.",
+    "about_p_text": "Chez Project D, nous pensons que le detailing professionnel doit être à la fois de haute qualité et au juste prix.<br/><br/> Chaque service est structuré de manière compétitive pour offrir des résultats exceptionnels.",
     "about_s_title": "EXCELLENT SERVICE CLIENT",
-    "about_s_text": "Project D est fier d'offrir une expérience de service aussi fiable que notre travail. Chaque client est traité avec respect, une communication claire et des conseils honnêtes.",
+    "about_s_text": "Project D est fier d'offrir une expérience de service aussi fiable que notre travail.<br/><br/> Chaque client est traité avec respect, une communication claire et des conseils honnêtes.",
     "footer_contact": "CONTACTEZ-NOUS"
   },
   "nl": {
@@ -72,12 +72,12 @@
     "serv_ceramic": "Keramische coating",
     "serv_seat": "Zetelreiniging",
     "about_title": "OVER ONS",
-    "about_q_title": "GEGARANDEERDE KWALITEIT",
-    "about_q_text": "Bij Project D besteden we de uiterste zorg aan elke auto die onze garage passeert. Elke auto wordt minutieus gereinigd en verzorgd met hoogwaardige producten en expertise. Alle werkzaamheden worden uitgevoerd door een gecertificeerde specialist.",
+    "about_q_title": "GEGARAN- DEERDE KWALITEIT",
+    "about_q_text": "Bij Project D besteden we de uiterste zorg aan elke auto die onze garage passeert.<br/><br/> Elke auto wordt minutieus gereinigd en verzorgd met hoogwaardige producten en expertise. Alle werkzaamheden worden uitgevoerd door een gecertificeerde specialist.",
     "about_p_title": "BETAALBARE PRIJZEN",
-    "about_p_text": "Bij Project D geloven we dat professionele detailing zowel van hoge kwaliteit als eerlijk geprijsd moet zijn. Elke service die we aanbieden is competitief gestructureerd om uitstekende resultaten te leveren.",
-    "about_s_title": "UITSTEKENDE KLANTENSERVICE",
-    "about_s_text": "Project D is trots op het bieden van een service-ervaring die even betrouwbaar is als ons vakmanschap. Elke klant wordt behandeld met respect, duidelijke communicatie en eerlijk advies.",
+    "about_p_text": "Bij Project D geloven we dat professionele detailing zowel van hoge kwaliteit als eerlijk geprijsd moet zijn.<br/><br/> Elke service die we aanbieden is competitief gestructureerd om uitstekende resultaten te leveren.",
+    "about_s_title": "UITSTEKENDE KLANTEN- SERVICE",
+    "about_s_text": "Project D is trots op het bieden van een service-ervaring die even betrouwbaar is als ons vakmanschap.<br/><br/> Elke klant wordt behandeld met respect, duidelijke communicatie en eerlijk advies.",
     "footer_contact": "CONTACTEER ONS"
   }
 }
