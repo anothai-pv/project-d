@@ -2,42 +2,128 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <title>
       Project D | Professional Car Detailing Braine-le-Château, Belgium
     </title>
+    <link rel="icon" href="assets/img/logo.svg" type="image/x-icon" />
 
+    <!-- Primary Meta Tags -->
+    <meta
+      name="title"
+      content="Project D | Professional Car Detailing Braine-le-Château, Belgium"
+    />
     <meta
       name="description"
-      content="Project D offers premium car detailing in Braine-le-Château. Interior cleaning, ceramic coating, polishing, and wax treatments at affordable prices. Book your car care today!"
+      content="Project D offers premium car detailing at Rue des Degues 2, Braine-le-Château. Interior cleaning, ceramic coating, polishing, and wax treatments at affordable prices. Book your car care today!"
     />
-
     <meta
       name="keywords"
-      content="car detailing belgium, car polish braine-le-chateau, ceramic coating, interior car cleaning, Project D"
+      content="car detailing, auto detailing, Braine-le-Château, Belgium, car wash, ceramic coating, car polishing, interior cleaning, Rue des Degues 2, Project D"
+    />
+    <meta name="author" content="Project D" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://project-d-cardetailing.be/" />
+    <meta
+      property="og:title"
+      content="Project D | Professional Car Detailing Braine-le-Château"
+    />
+    <meta
+      property="og:description"
+      content="Project D offers premium car detailing at Rue des Degues 2, Braine-le-Château. Interior cleaning, ceramic coating, polishing, and wax treatments at affordable prices."
+    />
+    <meta
+      property="og:image"
+      content="https://project-d-cardetailing.be/assets/img/homecar.png"
     />
 
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://project-d-cardetailing.be/" />
+    <meta
+      property="twitter:title"
+      content="Project D | Professional Car Detailing Braine-le-Château"
+    />
+    <meta
+      property="twitter:description"
+      content="Project D offers premium car detailing at Rue des Degues 2, Braine-le-Château. Interior cleaning, ceramic coating, polishing, and wax treatments at affordable prices."
+    />
+    <meta
+      property="twitter:image"
+      content="https://project-d-cardetailing.be/assets/img/homecar.png"
+    />
+
+    <!-- Local Business Geo Tags -->
+    <meta name="geo.region" content="BE-WBT" />
+    <meta name="geo.placename" content="Braine-le-Château" />
+    <meta name="geo.position" content="50.6811;4.2672" />
+    <meta name="ICBM" content="50.6811, 4.2672" />
+
+    <meta name="theme-color" content="#050101" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Structured Data for Local SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AutoBodyShop",
+        "name": "Project D Car Detailing",
+        "image": "https://project-d-cardetailing.be/assets/img/logo.svg",
+        "@id": "https://project-d-cardetailing.be/",
+        "url": "https://project-d-cardetailing.be/",
+        "email": "contact@project-d-cardetailing.be",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rue des Degues 2",
+          "addressLocality": "Braine-le-Château",
+          "addressCountry": "BE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 50.6811,
+          "longitude": 4.2672
+        },
+        "priceRange": "$$"
+      }
+    </script>
   </head>
   <body>
     <header>
       <div class="logo-container">
         <img src="assets/img/logo.svg" alt="project-d logo" class="logo link" />
-        <a href="#sec1" class="link home">HOME</a>
+        <a href="#sec1" class="link home" data-key="nav_home">HOME</a>
       </div>
-      <a href="#sec1" class="link home"></a>
-      <a href="#sec2" class="link link2">GALLERY</a>
-      <a href="#sec3" class="link link2">PRICING</a>
-      <a href="#contact" class="link link2">CONTACT</a>
+      <a href="#sec2" class="link link2" data-key="nav_gallery">GALLERY</a>
+      <a href="#sec3" class="link link2" data-key="nav_pricing">PRICING</a>
+      <a href="#contact" class="link link2" data-key="nav_contact">CONTACT</a>
+      <div class="lang-switcher">
+        <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+        <button onclick="changeLanguage('fr')" class="lang-btn">FR</button>
+        <button onclick="changeLanguage('nl')" class="lang-btn">NL</button>
+      </div>
     </header>
+
     <div class="phone-header">
       <div class="phone-nav-container">
         <img src="assets/img/logo.svg" alt="project-d logo" class="logo" />
-        <a href="#sec1" class="link home">HOME</a>
-        <a href="#sec2" class="link link2">GALLERY</a>
-        <a href="#sec3" class="link link2">PRICING</a>
-        <a href="#contact" class="link link2">CONTACT</a>
+        <a href="#sec1" class="link home" data-key="nav_home">HOME</a>
+        <a href="#sec2" class="link link2" data-key="nav_gallery">GALLERY</a>
+        <a href="#sec3" class="link link2" data-key="nav_pricing">PRICING</a>
+        <a href="#contact" class="link link2" data-key="nav_contact">CONTACT</a>
+        <div class="lang-switcher">
+          <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
+          <button onclick="changeLanguage('fr')" class="lang-btn">FR</button>
+          <button onclick="changeLanguage('nl')" class="lang-btn">NL</button>
+        </div>
       </div>
     </div>
     <button class="collapsible">x</button>
@@ -78,7 +164,9 @@
 
       <section id="sec2" class="sec2">
         <div class="grid grid2">
-          <h1 class="title">OUR LATEST REALISATIONS</h1>
+          <h1 class="title" data-key="gallery_title">
+            OUR LATEST REALISATIONS
+          </h1>
           <div class="roulette">
             <img
               id="left-arrow"
@@ -109,7 +197,7 @@
 
       <section id="sec3" class="sec3">
         <div class="grid grid3">
-          <h1 class="title">OUR PRICES</h1>
+          <h1 class="title" data-key="pricing_title">OUR PRICES</h1>
           <div class="prices">
             <div class="price-category">
               <button
@@ -117,117 +205,144 @@
                 type="button"
                 aria-expanded="false"
               >
-                <span>Citadine</span>
-                <span class="price-category-text">See prices</span>
+                <span data-key="cat_citadine">Citadine</span>
+                <span class="price-category-text" data-key="see_prices"
+                  >See prices</span
+                >
               </button>
               <div class="price-services">
                 <div class="price-service-row">
-                  <span>Interior cleaning</span><span>€50</span>
+                  <span data-key="serv_interior">Interior cleaning</span
+                  ><span>€50</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Exterior Hand Wash</span><span>€50</span>
+                  <span data-key="serv_exterior">Exterior Hand Wash</span
+                  ><span>€50</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Car Polish</span><span>€400</span>
+                  <span data-key="serv_polish">Car Polish</span
+                  ><span>€400</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Car Wax</span><span>€50</span>
+                  <span data-key="serv_wax">Car Wax</span><span>€50</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Ceramic Coating</span><span>€300</span>
+                  <span data-key="serv_ceramic">Ceramic Coating</span
+                  ><span>€300</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Seat Wash</span><span>€100</span>
+                  <span data-key="serv_seat">Seat Wash</span><span>€100</span>
                 </div>
               </div>
             </div>
+
             <div class="price-category">
               <button
                 class="price-category-toggle"
                 type="button"
                 aria-expanded="false"
               >
-                <span>Berline</span>
-                <span class="price-category-text">See prices</span>
+                <span data-key="cat_berline">Berline</span>
+                <span class="price-category-text" data-key="see_prices"
+                  >See prices</span
+                >
               </button>
               <div class="price-services">
                 <div class="price-service-row">
-                  <span>Interior cleaning</span><span>€50</span>
+                  <span data-key="serv_interior">Interior cleaning</span
+                  ><span>€50</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Exterior Hand Wash</span><span>€50</span>
+                  <span data-key="serv_exterior">Exterior Hand Wash</span
+                  ><span>€50</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Car Polish</span><span>€400</span>
+                  <span data-key="serv_polish">Car Polish</span
+                  ><span>€400</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Car Wax</span><span>€50</span>
+                  <span data-key="serv_wax">Car Wax</span><span>€50</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Ceramic Coating</span><span>€300</span>
+                  <span data-key="serv_ceramic">Ceramic Coating</span
+                  ><span>€300</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Seat Wash</span><span>€100</span>
+                  <span data-key="serv_seat">Seat Wash</span><span>€100</span>
                 </div>
               </div>
             </div>
+
             <div class="price-category">
               <button
                 class="price-category-toggle"
                 type="button"
                 aria-expanded="false"
               >
-                <span>SUV/Pickup</span>
-                <span class="price-category-text">See prices</span>
+                <span data-key="cat_suv">SUV/Pickup</span>
+                <span class="price-category-text" data-key="see_prices"
+                  >See prices</span
+                >
               </button>
               <div class="price-services">
                 <div class="price-service-row">
-                  <span>Interior cleaning</span><span>€60</span>
+                  <span data-key="serv_interior">Interior cleaning</span
+                  ><span>€60</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Exterior Hand Wash</span><span>€60</span>
+                  <span data-key="serv_exterior">Exterior Hand Wash</span
+                  ><span>€60</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Car Polish</span><span>€450</span>
+                  <span data-key="serv_polish">Car Polish</span
+                  ><span>€450</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Car Wax</span><span>€60</span>
+                  <span data-key="serv_wax">Car Wax</span><span>€60</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Ceramic Coating</span><span>€350</span>
+                  <span data-key="serv_ceramic">Ceramic Coating</span
+                  ><span>€350</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Seat Wash</span><span>€100</span>
+                  <span data-key="serv_seat">Seat Wash</span><span>€100</span>
                 </div>
               </div>
             </div>
+
             <div class="price-category">
               <button
                 class="price-category-toggle"
                 type="button"
                 aria-expanded="false"
               >
-                <span>camionette</span>
-                <span class="price-category-text">See prices</span>
+                <span data-key="cat_van">camionette</span>
+                <span class="price-category-text" data-key="see_prices"
+                  >See prices</span
+                >
               </button>
               <div class="price-services">
                 <div class="price-service-row">
-                  <span>Interior cleaning</span><span>€60</span>
+                  <span data-key="serv_interior">Interior cleaning</span
+                  ><span>€60</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Exterior Hand Wash</span><span>€60</span>
+                  <span data-key="serv_exterior">Exterior Hand Wash</span
+                  ><span>€60</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Car Polish</span><span>€450</span>
+                  <span data-key="serv_polish">Car Polish</span
+                  ><span>€450</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Car Wax</span><span>€60</span>
+                  <span data-key="serv_wax">Car Wax</span><span>€60</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Ceramic Coating</span><span>€350</span>
+                  <span data-key="serv_ceramic">Ceramic Coating</span
+                  ><span>€350</span>
                 </div>
                 <div class="price-service-row">
-                  <span>Seat Wash</span><span>€100</span>
+                  <span data-key="serv_seat">Seat Wash</span><span>€100</span>
                 </div>
               </div>
             </div>
@@ -237,7 +352,7 @@
 
       <section id="sec4" class="sec4">
         <div class="grid grid4">
-          <h1 class="about">ABOUT US</h1>
+          <h1 class="about" data-key="about_title">ABOUT US</h1>
         </div>
       </section>
 
@@ -252,18 +367,16 @@
             </div>
           </div>
           <div class="righttxt">
-            <h1 class="abttitle TT1">
+            <h1 class="abttitle TT1" data-key="about_q_title">
               GUARANTEED <br />
               QUALITY
             </h1>
-            <p>
+            <p data-key="about_q_text">
               Here at Project D, we ensure the utmost attention to each and
               every car that passes through our garage. <br /><br />
               Each car is meticulously cleaned and cared for using premium grade
               products and expertise. <br /><br />
-              All work is carried out by a certified specialist. We also offer a
-              wide range of additional services, including accessory
-              installation.
+              All work is carried out by a certified specialist.
             </p>
           </div>
         </div>
@@ -272,15 +385,15 @@
             <img src="assets/img/car3.jpg" alt="" class="abtimg" />
           </div>
           <div class="lefttxt">
-            <h1 class="abttitle TT2">
+            <h1 class="abttitle TT2" data-key="about_p_title">
               AFFORDABLE <br />
               PRICES
             </h1>
-            <p>
+            <p data-key="about_p_text">
               At Project D, we believe professional detailing should be both
-              high-quality and fairly priced. <br /><br />Every service we offer
-              is competitively structured to provide outstanding results without
-              unnecessary cost.
+              high-quality and fairly priced. <br /><br />
+              Every service we offer is competitively structured to provide
+              outstanding results.
             </p>
           </div>
         </div>
@@ -294,13 +407,13 @@
             </div>
           </div>
           <div class="righttxt">
-            <p>
+            <p data-key="about_s_text">
               Project D takes pride in providing a service experience that is as
-              dependable as our workmanship. <br /><br />Every client is treated
-              with respect, clear communication, and honest guidance from start
-              to finish.
+              dependable as our workmanship. <br /><br />
+              Every client is treated with respect, clear communication, and
+              honest guidance.
             </p>
-            <h1 class="abttitle TT3">
+            <h1 class="abttitle TT3" data-key="about_s_title">
               EXCELLENT <br />
               CUSTOMER <br />
               SERVICE
@@ -314,22 +427,45 @@
 
     <footer id="contact" class="contact">
       <div class="contactgrid">
-        <h1 class="contacttitle">CONTACT US</h1>
+        <h1 class="contacttitle" data-key="footer_contact">CONTACT US</h1>
         <div class="contactleft">
           <div class="socials">
-            <a href="" class="social">Instagram </a>
+            <a
+              href="https://www.instagram.com/project.d.official/"
+              target="_blank"
+              class="social"
+              >Instagram
+            </a>
             <img src="assets/img/linkarrow.svg" alt="" class="linkarrow" />
           </div>
           <div class="socials">
-            <a href="" class="social">Facebook </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61582170616872"
+              target="_blank"
+              class="social"
+              >Facebook
+            </a>
+            <img src="assets/img/linkarrow.svg" alt="" class="linkarrow" />
+          </div>
+          <div class="socials">
+            <a
+              href="https://www.tiktok.com/@project.d_official?_r=1&_t=ZG-94nn7wk1KSm"
+              target="_blank"
+              class="social"
+              >TikTok
+            </a>
             <img src="assets/img/linkarrow.svg" alt="" class="linkarrow" />
           </div>
         </div>
 
         <div class="contactright">
           <h1 class="email">
-            <a class="social" href="mailto:contact@ProjectD.com"
-              >contact@ProjectD.com</a
+            <a
+              class="social"
+              href="mailto:contact@project-d-cardetailing.be"
+              target="_blank"
+            >
+              contact@project-d-cardetailing.be</a
             >
           </h1>
           <address class="address">
@@ -373,6 +509,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
