@@ -5,6 +5,9 @@ let currentIndex = 0;
 
 /* --- Translation Logic --- */
 async function initTranslations() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const urlLang = urlParams.get("lang"); // Check if ?lang=fr is in URL
+  const savedLang = urlLang || localStorage.getItem("selectedLanguage") || "en";
   try {
     const response = await fetch("./text-translate.json");
     if (!response.ok) throw new Error("Translation file not found");
@@ -31,6 +34,14 @@ window.changeLanguage = function (lang) {
 
   $(".lang-btn").removeClass("active");
   $(`.lang-btn[onclick*="${lang}"]`).addClass("active");
+  const newurl =
+    window.location.protocol +
+    "//" +
+    window.location.host +
+    window.location.pathname +
+    "?lang=" +
+    lang;
+  window.history.pushState({ path: newurl }, "", newurl);
 };
 
 /* --- Gallery Logic --- */

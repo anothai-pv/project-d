@@ -391,6 +391,16 @@ img {
   font-family: StretchProBasic;
   color: white;
 }
+@media (max-width: 768px) {
+  .prices {
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2vh;
+    font-family: StretchProBasic;
+    color: white;
+  }
+}
 .grid3 {
   min-height: 100vh;
   height: auto;
@@ -499,7 +509,6 @@ img {
   .leftimg {
     grid-column: 1/6;
     grid-row: 1/4;
-
     position: relative;
     overflow: hidden;
   }
@@ -508,13 +517,12 @@ img {
     grid-row: 4/6;
 
     height: 80%;
-    margin-top: 8%;
   }
   .rightimg {
     grid-column: 1/6;
     grid-row: 1/4;
 
-    height: 80%;
+    height: 100%;
     margin-top: 5%;
   }
   .righttxt {
@@ -627,6 +635,7 @@ p {
 
   /* Crucial: keeps the text on one line */
   white-space: nowrap;
+  max-width: 80vw;
 }
 
 .contactleft {
@@ -734,7 +743,18 @@ footer {
     padding: 10vh 0;
   }
   .contacttitle {
-    white-space: wrap;
+    grid-row: 1/3;
+    grid-column: 1/6;
+    font-family: stretchProBasic;
+
+    /* 18cqi means it will be 18% of the grid container width */
+    font-size: clamp(1rem, 30cqi, 1.2rem);
+
+    letter-spacing: 18px;
+    text-align: center;
+
+    /* Crucial: keeps the text on one line */
+    white-space: nowrap;
   }
   .contactleft {
     grid-row: 2/4;
@@ -756,7 +776,9 @@ footer {
     font-size: clamp(1.2rem, 4vw, 2rem);
     line-height: clamp(1.2, 2vw, 1.5);
   }
-
+  .email {
+    text-align: center;
+  }
   .social:hover {
     font-size: 5vw;
   }
