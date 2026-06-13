@@ -7,19 +7,28 @@ let currentIndex = 0;
 async function initTranslations() {
   const urlParams = new URLSearchParams(window.location.search);
   const urlLang = urlParams.get("lang"); // Check if ?lang=fr is in URL
-  const savedLang = urlLang || localStorage.getItem("selectedLanguage") || "en";
+
+  const browserLang = (navigator.language || navigator.userLanguage)
+    .substring(0, 2)
+    .toLowerCase();
+  const supportedLangs = ["en", "fr", "nl"];
+  const fallbackLang = supportedLangs.includes(browserLang)
+    ? browserLang
+    : "en";
+
+  const savedLang =
+    urlLang || localStorage.getItem("selectedLanguage") || fallbackLang;
   try {
     const response = await fetch("./text-translate.json");
     if (!response.ok) throw new Error("Translation file not found");
     translations = await response.json();
-    const savedLang = localStorage.getItem("selectedLanguage") || "en";
     window.changeLanguage(savedLang);
   } catch (error) {
     console.error("Translation load error:", error);
   }
 }
 
-window.changeLanguage = function (lang) {
+window.changeLanguage = function (lang, skipPushState = false) {
   if (!translations || Object.keys(translations).length === 0) return;
 
   $("[data-key]").each(function () {
@@ -33,16 +42,37 @@ window.changeLanguage = function (lang) {
   localStorage.setItem("selectedLanguage", lang);
 
   $(".lang-btn").removeClass("active");
-  $(`.lang-btn[onclick*="${lang}"]`).addClass("active");
-  const newurl =
-    window.location.protocol +
-    "//" +
-    window.location.host +
-    window.location.pathname +
-    "?lang=" +
-    lang;
-  window.history.pushState({ path: newurl }, "", newurl);
+  $(`.lang-btn[href="?lang=${lang}"]`).addClass("active");
+
+  if (!skipPushState) {
+    const newurl =
+      window.location.protocol +
+      "//" +
+      window.location.host +
+      window.location.pathname +
+      "?lang=" +
+      lang;
+    window.history.pushState({ path: newurl }, "", newurl);
+  }
 };
+
+window.addEventListener("popstate", () => {
+  const urlParams = new URLSearchParams(window.location.search);
+
+  const browserLang = (navigator.language || navigator.userLanguage)
+    .substring(0, 2)
+    .toLowerCase();
+  const supportedLangs = ["en", "fr", "nl"];
+  const fallbackLang = supportedLangs.includes(browserLang)
+    ? browserLang
+    : "en";
+
+  const urlLang =
+    urlParams.get("lang") ||
+    localStorage.getItem("selectedLanguage") ||
+    fallbackLang;
+  window.changeLanguage(urlLang, true);
+});
 
 /* --- Gallery Logic --- */
 const BEHOLD_API_URL = "https://feeds.behold.so/N956tEmRytyql1GXjgrM"; // REPLACE THIS

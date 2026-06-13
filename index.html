@@ -9,7 +9,8 @@
     <title>
       Project D | Professional Car Detailing Braine-le-Château, Belgium
     </title>
-    <link rel="icon" href="assets/img/logo.svg" type="image/x-icon" />
+    <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/img/logo.svg?v=2" />
 
     <!-- Primary Meta Tags -->
     <meta
@@ -18,32 +19,37 @@
     />
     <meta
       name="description"
-      content="Project D offers premium car detailing at Rue des Degues 2, Braine-le-Château. Interior cleaning, ceramic coating, polishing, and wax treatments at affordable prices. Book your car care today!"
+      content="Project D offers premium car detailing at Rue des Degues 2, Braine-le-Château (near Waterloo, Halle, Tubize, Braine-l'Alleud). Interior cleaning, ceramic coating, polishing, and wax treatments at affordable prices."
     />
     <meta
       name="keywords"
-      content="car detailing, auto detailing, Braine-le-Château, Belgium, car wash, ceramic coating, car polishing, interior cleaning, Rue des Degues 2, Project D"
+      content="car detailing, auto detailing, Braine-le-Château, Belgium, car wash, ceramic coating, car polishing, interior cleaning, Rue des Degues 2, Project D, Waterloo, Halle, Tubize, Braine l'Alleud"
     />
     <meta name="author" content="Project D" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://project-d-cardetailing.be/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_BE" />
+    <meta property="og:locale:alternate" content="nl_BE" />
     <meta
       property="og:title"
       content="Project D | Professional Car Detailing Braine-le-Château"
     />
     <meta
       property="og:description"
-      content="Project D offers premium car detailing at Rue des Degues 2, Braine-le-Château. Interior cleaning, ceramic coating, polishing, and wax treatments at affordable prices."
+      content="Project D offers premium car detailing at Rue des Degues 2, Braine-le-Château (near Waterloo, Halle, Tubize, Braine-l'Alleud). Interior cleaning, ceramic coating, polishing, and wax treatments at affordable prices."
     />
     <meta
       property="og:image"
-      content="https://project-d-cardetailing.be/assets/img/homecar.png"
+      content="https://project-d-cardetailing.be/assets/logo.png"
     />
+    <meta property="og:image:width" content="1106">
+    <meta property="og:image:height" content="713">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:card" content="https://project-d-cardetailing.be/assets/logo.png" />
     <meta property="twitter:url" content="https://project-d-cardetailing.be/" />
     <meta
       property="twitter:title"
@@ -51,11 +57,11 @@
     />
     <meta
       property="twitter:description"
-      content="Project D offers premium car detailing at Rue des Degues 2, Braine-le-Château. Interior cleaning, ceramic coating, polishing, and wax treatments at affordable prices."
+      content="Project D offers premium car detailing at Rue des Degues 2, Braine-le-Château (near Waterloo, Halle, Tubize, Braine-l'Alleud). Interior cleaning, ceramic coating, polishing, and wax treatments at affordable prices."
     />
     <meta
       property="twitter:image"
-      content="https://project-d-cardetailing.be/assets/img/homecar.png"
+      content="https://project-d-cardetailing.be/assets/logo.png"
     />
 
     <!-- Local Business Geo Tags -->
@@ -69,6 +75,30 @@
       name="apple-mobile-web-app-status-bar-style"
       content="black-translucent"
     />
+    <meta http-equiv="content-language" content="en, fr, nl" />
+
+    <!-- Hreflang Tags for SEO -->
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://project-d-cardetailing.be/?lang=en"
+    />
+    <link
+      rel="alternate"
+      hreflang="fr"
+      href="https://project-d-cardetailing.be/?lang=fr"
+    />
+    <link
+      rel="alternate"
+      hreflang="nl"
+      href="https://project-d-cardetailing.be/?lang=nl"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://project-d-cardetailing.be/"
+    />
+
     <link rel="stylesheet" href="style.css?v=1.1" />
 
     <!-- Structured Data for Local SEO -->
@@ -87,6 +117,13 @@
           "addressLocality": "Braine-le-Château",
           "addressCountry": "BE"
         },
+        "areaServed": [
+          "Braine-le-Château",
+          "Waterloo",
+          "Halle",
+          "Tubize",
+          "Braine-l'Alleud"
+        ],
         "geo": {
           "@type": "GeoCoordinates",
           "latitude": 50.6811,
@@ -99,31 +136,83 @@
   <body>
     <header>
       <div class="logo-container">
-        <img src="assets/img/logo.svg" alt="project-d logo" class="logo link" />
+        <img
+          src="./assets/img/logo.png"
+          alt="project-d logo"
+          class="logo link"
+        />
         <a href="#sec1" class="link home" data-key="nav_home">HOME</a>
       </div>
       <a href="#sec2" class="link link2" data-key="nav_gallery">GALLERY</a>
       <a href="#sec3" class="link link2" data-key="nav_pricing">PRICING</a>
       <a href="#contact" class="link link2" data-key="nav_contact">CONTACT</a>
       <div class="lang-switcher">
-        <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
-        <button onclick="changeLanguage('fr')" class="lang-btn">FR</button>
-        <button onclick="changeLanguage('nl')" class="lang-btn">NL</button>
+        <a
+          href="?lang=en"
+          onclick="
+            event.preventDefault();
+            changeLanguage('en');
+          "
+          class="lang-btn"
+          >EN</a
+        >
+        <a
+          href="?lang=fr"
+          onclick="
+            event.preventDefault();
+            changeLanguage('fr');
+          "
+          class="lang-btn"
+          >FR</a
+        >
+        <a
+          href="?lang=nl"
+          onclick="
+            event.preventDefault();
+            changeLanguage('nl');
+          "
+          class="lang-btn"
+          >NL</a
+        >
       </div>
     </header>
 
     <div class="phone-header">
       <div class="phone-nav-container">
-        <img src="assets/img/logo.svg" alt="project-d logo" class="logo" />
+        <img src="assets/img/logo.png" alt="project-d logo" class="logo" />
         <a href="#sec1" class="link home" data-key="nav_home">HOME</a>
 
         <a href="#sec2" class="link link2" data-key="nav_gallery">GALLERY</a>
         <a href="#sec3" class="link link2" data-key="nav_pricing">PRICING</a>
         <a href="#contact" class="link link2" data-key="nav_contact">CONTACT</a>
         <div class="lang-switcher">
-          <button onclick="changeLanguage('en')" class="lang-btn">EN</button>
-          <button onclick="changeLanguage('fr')" class="lang-btn">FR</button>
-          <button onclick="changeLanguage('nl')" class="lang-btn">NL</button>
+          <a
+            href="?lang=en"
+            onclick="
+              event.preventDefault();
+              changeLanguage('en');
+            "
+            class="lang-btn"
+            >EN</a
+          >
+          <a
+            href="?lang=fr"
+            onclick="
+              event.preventDefault();
+              changeLanguage('fr');
+            "
+            class="lang-btn"
+            >FR</a
+          >
+          <a
+            href="?lang=nl"
+            onclick="
+              event.preventDefault();
+              changeLanguage('nl');
+            "
+            class="lang-btn"
+            >NL</a
+          >
         </div>
       </div>
     </div>

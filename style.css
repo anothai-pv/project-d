@@ -34,6 +34,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   min-height: 100vh;
   /* Make the body transparent so the html background shows through */
   background: transparent;
@@ -41,7 +42,7 @@ body {
 
 section {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: rgb(5, 1, 1);
 }
 
@@ -122,7 +123,7 @@ a {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     font-family: StretchProBasic;
     z-index: 999;
     opacity: 0;
@@ -145,16 +146,18 @@ a {
 }
 .logo {
   width: 40%;
+  width: auto;
   height: 5vh;
   object-fit: contain;
   opacity: 0.5;
   margin-top: 5%;
+  flex-shrink: 0;
 }
 
 .intro {
   background-color: black;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -194,7 +197,7 @@ section {
   margin-top: 0;
   padding-top: 1px;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: #75020f;
   background: linear-gradient(
     0deg,
@@ -576,7 +579,7 @@ img {
 }
 .contact {
   height: 50vh;
-  width: 100vw;
+  width: 100%;
   position: relative;
   background-color: rgb(219, 219, 219);
 }
@@ -627,15 +630,17 @@ p {
   grid-column: 1/6;
   font-family: stretchProBasic;
 
-  /* 18cqi means it will be 18% of the grid container width */
-  font-size: clamp(5rem, 30cqi, 5.7rem);
+  /* Adjusted so longer translations fit nicely */
+  font-size: clamp(2rem, 10cqi, 4.5rem);
 
-  letter-spacing: 18px;
+  letter-spacing: 6px;
   text-align: center;
 
-  /* Crucial: keeps the text on one line */
-  white-space: nowrap;
-  max-width: 80vw;
+  white-space: normal;
+  word-wrap: break-word; /* Prevents overflow for long words */
+  width: 100%;
+  /* Counters the extra space added to the right by letter-spacing */
+  padding-left: 6px;
 }
 
 .contactleft {
@@ -747,14 +752,15 @@ footer {
     grid-column: 1/6;
     font-family: stretchProBasic;
 
-    /* 18cqi means it will be 18% of the grid container width */
-    font-size: clamp(1rem, 30cqi, 1.2rem);
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
 
-    letter-spacing: 18px;
+    letter-spacing: 4px;
     text-align: center;
 
-    /* Crucial: keeps the text on one line */
-    white-space: nowrap;
+    white-space: normal;
+    word-wrap: break-word;
+    /* Counters the extra space added to the right by letter-spacing */
+    padding-left: 4px;
   }
   .contactleft {
     grid-row: 2/4;
