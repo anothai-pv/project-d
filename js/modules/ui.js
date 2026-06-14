@@ -1,4 +1,4 @@
-import { getTranslations, changeLanguage } from "./i18n.js";
+import { getTranslations, changeLanguage } from "./translations.js";
 
 export function initUI() {
   // Mobile menu toggle

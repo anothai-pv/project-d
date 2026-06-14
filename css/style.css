@@ -310,29 +310,39 @@ video {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2vw;
+    padding: 0;
     margin-top: -5vh;
 }
 .images {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    gap: 7vw;
+    justify-content: center;
+    gap: 1.5vw;
 }
 
 @media (max-width: 768px) {
+    .roulette {
+        padding: 0 2vw;
+    }
+    .images {
+        gap: 0;
+    }
     .image-container:nth-child(1),
     .image-container:nth-child(3) {
         display: none;
     }
     .image-container:nth-child(2) {
-        width: 100%;
+        width: 60vw;
+        height: 45vh;
+    }
+    .arrow {
+        width: 35px;
+        height: 35px;
     }
 }
 
 .image-container {
-    width: 19vw;
-    height: 50vh;
+    width: 25vw;
+    height: 60vh;
     border-radius: 20px;
     overflow: hidden;
     background: #000;
@@ -372,6 +382,7 @@ video {
     height: 50px;
     cursor: pointer;
     transition: scale 0.3s;
+    z-index: 10;
 }
 .arrow:hover {
     scale: 1.2;

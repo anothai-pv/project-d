@@ -1,12 +1,12 @@
-import { initTranslations, changeLanguage } from './modules/i18n.js';
-import { loadGalleryMedia, nextMedia, prevMedia } from './modules/gallery.js';
-import { initUI } from './modules/ui.js';
-import { initAnimations } from './modules/animations.js';
+import { initTranslations, changeLanguage } from "./modules/translations.js";
+import { loadGalleryMedia, nextMedia, prevMedia } from "./modules/gallery.js";
+import { initUI } from "./modules/ui.js";
+import { initAnimations } from "./modules/animations.js";
 
 $(async function () {
   // Initialize Modules
   await initTranslations();
-  loadGalleryMedia();
+  loadGalleryMedia(); // Load gallery in background
   initUI();
   initAnimations();
 

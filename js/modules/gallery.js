@@ -13,13 +13,25 @@ export async function loadGalleryMedia() {
   console.log("Fetching gallery assets via PHP bridge...");
   try {
     const response = await fetch(PHP_BRIDGE_URL);
-    if (!response.ok) throw new Error("Could not reach PHP bridge");
+    if (!response.ok) {
+      console.warn("PHP bridge not reachable, using fallback.");
+      fallbackDiscovery();
+      return;
+    }
 
     const fileNames = await response.json();
+    if (!Array.isArray(fileNames)) {
+      console.warn("Invalid response from PHP bridge, using fallback.");
+      fallbackDiscovery();
+      return;
+    }
+
     const discoveredMedia = [];
 
     fileNames.forEach((fileName) => {
-      const ext = fileName.split(".").pop().toLowerCase();
+      const parts = fileName.split(".");
+      if (parts.length < 2) return;
+      const ext = parts.pop().toLowerCase();
       let type = null;
 
       if (MEDIA_EXTENSIONS.IMAGE.includes(ext)) {
@@ -37,12 +49,13 @@ export async function loadGalleryMedia() {
       }
     });
 
-    if (discoveredMedia.length === 0) throw new Error("No media files found");
-
-    initializeGallery(discoveredMedia);
+    if (discoveredMedia.length === 0) {
+      fallbackDiscovery();
+    } else {
+      initializeGallery(discoveredMedia);
+    }
   } catch (error) {
-    console.error("Automatic discovery failed:", error);
-    // Fallback to basic names if PHP fails (e.g., local development)
+    console.error("Gallery discovery error:", error);
     fallbackDiscovery();
   }
 }
@@ -103,8 +116,10 @@ function renderMedia(containerId, item) {
       muted: true,
       playsinline: true,
       poster: item.thumbnail,
+      controls: true,
       class: "gallery-video",
     });
+    $video[0].muted = true;
     $video.attr("id", containerId.replace("#", ""));
     $container.append($video);
   } else {
